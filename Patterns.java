@@ -1,7 +1,7 @@
 //
 //  Class author: Joe Jiao
 //  Date created: 10/29/2025
-//  General description:
+//  General description: 
 //
 public class Patterns {
   public static void main(String[] args){
@@ -9,12 +9,15 @@ public class Patterns {
     System.out.println("");
     triangle(9);
     System.out.println("");
-    odds (8);
+    odds (9);
     System.out.println("");
+    eo (6);
+    System.out.println("");
+    pyramid (5);
   }
 
-  //  Pre-condition: what must be true prior to the method being called including possible limitations on input
-  //  Post-condition: what the result of executing this method will be.
+  //  Pre-condition: 
+  //  Post-condition: 
   public static void stars(int rows){
     String placeholder = "";
     var row = 0;
@@ -32,8 +35,8 @@ public class Patterns {
     }
   }
 
-  //  Pre-condition: what must be true prior to the method being called including possible limitations on input
-  //  Post-condition: what the result of executing this method will be.
+  //  Pre-condition: 
+  //  Post-condition: 
   public static void triangle(int rows){
     String placeholder = "";
     var row = 1;
@@ -52,8 +55,8 @@ public class Patterns {
     }
   }
 
-  //  Pre-condition: what must be true prior to the method being called including possible limitations on input
-  //  Post-condition: what the result of executing this method will be.
+  //  Pre-condition: 
+  //  Post-condition: 
   public static void odds(int start){
     String placeholder = "";
     for (int i = start; i > 0;) {
@@ -64,22 +67,47 @@ public class Patterns {
     }
   }
   
-  //  Pre-condition: what must be true prior to the method being called including possible limitations on input
-  //  Post-condition: what the result of executing this method will be.
+  //  Pre-condition: 
+  //  Post-condition: 
   public static void eo(int maxE){
-    char startLetter;
-    if (maxE % 2 == 1) {
-      startLetter = 'E';
-    } else startLetter = 'O';
+    char letter;
+    String placeholder;
     
-    for (var i = 0; i < maxE; i++) {}
+    for (var i = 0; i < maxE; i++) {
+      if ((maxE + i) % 2 == 1) letter = 'E';
+      else letter = 'O';
 
+      placeholder = "";
+      for (var j = 0; j <= i; j++) {
+        placeholder += letter;
+      }
+      System.out.println(placeholder);
+    }
+
+    for (var i = maxE - 2; i >= 0; i--) {
+      if ((maxE + i) % 2 == 1) letter = 'E';
+      else letter = 'O';
+
+      placeholder = "";
+      for (var j = 0; j <= i; j++) {
+        placeholder += letter;
+      }
+      System.out.println(placeholder);
+    }
   }
 
 
-  //  Pre-condition: what must be true prior to the method being called including possible limitations on input
-  //  Post-condition: what the result of executing this method will be.
+  //  Pre-condition: 
+  //  Post-condition: 
   public static void pyramid(int rows){
-    
+    String spaces = "";
+    String letters = "";
+    for (var i = 0; i < rows; i++) {
+      for (var j = 0; j < (2 * rows - 1 - 2 * i); j++) letters = letters + (i + 1);
+
+      System.out.println(spaces + letters + spaces);
+      spaces += " ";
+      letters = "";
+    }
   }
 }
