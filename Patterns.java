@@ -19,13 +19,11 @@ public class Patterns {
   //  Pre-condition: 
   //  Post-condition: 
   public static void stars(int rows){
-    String placeholder = "";
-    var row = 0;
-    var amount = 0;
+    int row = 0;
     while (row < rows) {
-      placeholder = "";
-
-      amount = 0;
+      String placeholder = "";
+      
+      int amount = 0;
       while (amount < (1 + 2 * row)) {
         placeholder += "*";
         amount++;
@@ -38,13 +36,11 @@ public class Patterns {
   //  Pre-condition: 
   //  Post-condition: 
   public static void triangle(int rows){
-    String placeholder = "";
-    var row = 1;
-    var amount = 0;
+    int row = 1;
     while (row <= rows) {
-      placeholder = "";
+      String placeholder = "";
 
-      amount = 0;
+      int amount = 0;
       while (amount < row) {
         placeholder += row;
         amount++;
@@ -58,9 +54,8 @@ public class Patterns {
   //  Pre-condition: 
   //  Post-condition: 
   public static void odds(int start){
-    String placeholder = "";
     for (int i = start; i > 0;) {
-      placeholder = "";
+      String placeholder = "";
       for (int j = 0; j < i; j++) placeholder += i;
       System.out.println(placeholder);
       i -= 2;
@@ -70,26 +65,23 @@ public class Patterns {
   //  Pre-condition: 
   //  Post-condition: 
   public static void eo(int maxE){
-    char letter;
-    String placeholder;
-    
-    for (var i = 0; i < maxE; i++) {
+    for (int i = 0; i < maxE; i++) {
+      char letter = 'O';
       if ((maxE + i) % 2 == 1) letter = 'E';
-      else letter = 'O';
 
-      placeholder = "";
-      for (var j = 0; j <= i; j++) {
+      String placeholder = "";
+      for (int j = 0; j <= i; j++) {
         placeholder += letter;
       }
       System.out.println(placeholder);
     }
 
-    for (var i = maxE - 2; i >= 0; i--) {
+    for (int i = maxE - 2; i >= 0; i--) {
+      char letter = 'O';
       if ((maxE + i) % 2 == 1) letter = 'E';
-      else letter = 'O';
 
-      placeholder = "";
-      for (var j = 0; j <= i; j++) {
+      String placeholder = "";
+      for (int j = 0; j <= i; j++) {
         placeholder += letter;
       }
       System.out.println(placeholder);
@@ -100,14 +92,13 @@ public class Patterns {
   //  Pre-condition: 
   //  Post-condition: 
   public static void pyramid(int rows){
-    String spaces = "";
-    String letters = "";
-    for (var i = 0; i < rows; i++) {
-      for (var j = 0; j < (2 * rows - 1 - 2 * i); j++) letters = letters + (i + 1);
+    for (int i = 0; i < rows; i++) {
+      String spaces = "";
+      String letters = "";
+      for (int j = 0; j < (2 * rows - 1 - 2 * i); j++) letters += (i + 1);
 
       System.out.println(spaces + letters + spaces);
       spaces += " ";
-      letters = "";
     }
   }
 }
