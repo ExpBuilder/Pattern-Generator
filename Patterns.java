@@ -70,9 +70,7 @@ public class Patterns {
       if ((maxE + i) % 2 == 1) letter = 'E';
 
       String placeholder = "";
-      for (int j = 0; j <= i; j++) {
-        placeholder += letter;
-      }
+      for (int j = 0; j <= i; j++) placeholder += letter;
       System.out.println(placeholder);
     }
 
@@ -81,21 +79,18 @@ public class Patterns {
       if ((maxE + i) % 2 == 1) letter = 'E';
 
       String placeholder = "";
-      for (int j = 0; j <= i; j++) {
-        placeholder += letter;
-      }
+      for (int j = 0; j <= i; j++) placeholder += letter;
       System.out.println(placeholder);
     }
   }
 
-
   //  Pre-condition: 
   //  Post-condition: 
   public static void pyramid(int rows){
-    for (int i = 0; i < rows; i++) {
-      String spaces = "";
+    String spaces = "";
+    for (int i = 1; i <= rows; i++) {
       String letters = "";
-      for (int j = 0; j < (2 * rows - 1 - 2 * i); j++) letters += (i + 1);
+      for (int j = 0; j < (2 * rows + 1 - 2 * i); j++) letters += i;
 
       System.out.println(spaces + letters + spaces);
       spaces += " ";
