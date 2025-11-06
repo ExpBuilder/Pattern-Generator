@@ -64,8 +64,9 @@ public class Patterns {
   }
 
   //  Pre-condition: Input start must be an odd integer between 1 and 9, inclusive.
-  /*Post-condition: 
-
+  /*  Post-condition:  A right triangle or 'pyramid' with the vertical leg aligned to the left and horizontal leg aligned to the top is formed out of numbers.
+  The numbers each row is composed of is the length of each row
+  The first row is of length input start. Each following row is two characters shorter
   */
   public static void odds(int start){
     if (start % 2 == 0 || start >= 10 || start < 1) return;
@@ -79,7 +80,10 @@ public class Patterns {
   }
   
   //  Pre-condition: Input maxE must be a positive integer.
-  //  Post-condition: 
+  /*  Post-condition:  An isosceles triangle with the base aligned to the left is formed of either the characters E or O
+  
+  
+  */
   public static void eo(int maxE){
     if (maxE < 1) return;
 
